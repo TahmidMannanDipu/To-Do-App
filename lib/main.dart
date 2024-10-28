@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:to_do_app/pages/home_page.dart'; // Adjust the path if needed
+import 'package:to_do_app/pages/home_page.dart';
+import 'package:to_do_app/splash_screen.dart'; // Adjust the path if needed
 
 void main() async {
   // Ensure Flutter is fully initialized before any async operation
@@ -25,7 +26,7 @@ class ToDoApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.yellow
       ),
-      home: const HomePage(),
+      home: const SplashScreen(),
       // Set your HomePage here
     );
   }

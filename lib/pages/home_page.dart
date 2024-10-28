@@ -12,7 +12,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final _myBox = Hive.box('mybox'); // Access Hive box
+  final _myBox = Hive.box('mybox');
 
   ToDoDataBase db = ToDoDataBase();
 
@@ -30,13 +30,14 @@ class _HomePageState extends State<HomePage> {
 
   final textEditingController = TextEditingController();
 
+  // checkbox
   void checkBoxChanged(bool? value, int index) {
     setState(() {
       db.toDoList[index][1] = !db.toDoList[index][1];
     });
     db.updateDatabase();
   }
-
+ //save new task
   void saveNewTask() {
     if (textEditingController.text.isNotEmpty) {
       setState(() {
@@ -47,7 +48,7 @@ class _HomePageState extends State<HomePage> {
       db.updateDatabase();
     }
   }
-
+// create new task
   void createNewTask() {
     showDialog(
       context: context,
