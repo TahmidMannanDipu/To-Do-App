@@ -12,11 +12,11 @@ void main() async {
   // Open the Hive box (critical step!)
   await Hive.openBox('mybox');
 
-  runApp( ToDoApp());
+  runApp( const ToDoApp());
 }
 
 class ToDoApp extends StatelessWidget {
-  ToDoApp({super.key});
+  const ToDoApp({super.key});
 
   @override
   Widget build(BuildContext context) {

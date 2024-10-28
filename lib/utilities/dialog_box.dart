@@ -3,9 +3,9 @@ import 'package:to_do_app/utilities/my_buttons.dart';
 
  class DialogBox extends StatelessWidget {
    final TextEditingController textEditingController;
-   VoidCallback onSave;
-   VoidCallback onCancel;
-    DialogBox({super.key,
+   final VoidCallback onSave;
+   final VoidCallback onCancel;
+   const DialogBox({super.key,
      required this.textEditingController,
      required this.onSave,
      required this.onCancel});
@@ -16,7 +16,7 @@ import 'package:to_do_app/utilities/my_buttons.dart';
    Widget build(BuildContext context) {
      return AlertDialog(
        backgroundColor: Colors.yellow[200],
-       content: Container(
+       content: SizedBox(
          height: 200,
          child: Column(
            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -24,8 +24,8 @@ import 'package:to_do_app/utilities/my_buttons.dart';
              //input from user
              TextField(
                controller: textEditingController,
-               decoration: InputDecoration(
-                 border: OutlineInputBorder(),
+               decoration: const InputDecoration(
+                 border:OutlineInputBorder(),
                  hintText: "Add a new task"
                ),
              ),
@@ -35,7 +35,7 @@ import 'package:to_do_app/utilities/my_buttons.dart';
                children: [
                  //Save button
                  MyButtons(text: "Save", onPressed: onSave,color: Theme.of(context).primaryColor,),
-               SizedBox(width: 16),
+               const SizedBox(width: 16),
                //cancel button
                MyButtons(text: 'Cancel', onPressed: onCancel,color: Colors.redAccent,)],
              )
