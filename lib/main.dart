@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:to_do_app/pages/home_page.dart';
 import 'package:to_do_app/splash_screen.dart'; // Adjust the path if needed
 
 void main() async {
