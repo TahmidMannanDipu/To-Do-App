@@ -3,6 +3,7 @@
 A new Flutter project.
 
 ## Getting Started
+![Simulator Screenshot - iPhone 16 Plus - 2024-11-27 at 23 32 06](https://github.com/user-attachments/assets/b69fca55-0bcc-4033-b863-5fc181f3832b)
 
 This project is a starting point for a Flutter application.
 
